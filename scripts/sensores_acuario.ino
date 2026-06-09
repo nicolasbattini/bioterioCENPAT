@@ -5,8 +5,6 @@
 #include <DallasTemperature.h>
 
 // ---------- credenciales WiFi ------------
-// const char* ssid = "Martina"; # Prueba en casa 
-// const char* password = "Zimba123";
 const char* ssid = "OCTOPUS";
 const char* password = "patagonico";
 
