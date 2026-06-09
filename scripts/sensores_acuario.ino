@@ -4,17 +4,17 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-// ---------- WiFi credentials ----------
+// ---------- credenciales WiFi ------------
 // const char* ssid = "Martina"; # Prueba en casa 
 // const char* password = "Zimba123";
 const char* ssid = "OCTOPUS";
 const char* password = "patagonico";
 
-// ---------- Google Sheets Web App URL (https://...) ----------
-const char* googleScriptURL = "https://script.google.com/macros/s/AKfycbw_nOGbdNBlFVBm_gEECXBjiBi8zrlCnnvc2A_g5pyiW0lpEExVXR5cNiU851JhnUKa/exec";
+// ---------- Google Sheets Web App URL (https://...) ------------
+const char* googleScriptURL = "https://script.google.com/macros/s/AKfycbw_nOGbdNBlFVBm_gEECXBjiBi8zrlCnnvc2A_g5pyiW0lpEExVXR5cNiU851JhnUKa/exec"; // Chequear url de la web app en appscript.
 
 // ---------- Sensores ----------
-OneWire ourWire(2);               // Pin D4 (GPIO2)
+OneWire ourWire(2);               // Pin D4 (GPIO2). Los módulos ESP32 no tienen impresa la numeracion 
 DallasTemperature sensors(&ourWire);
 
 // ---------- Cliente seguro para HTTPS ----------
@@ -22,7 +22,7 @@ WiFiClientSecure secureClient;
 HTTPClient http;
 
 // ---------- Intervalo de muestreo ----------
-const unsigned long interval = 10000;
+const unsigned long interval = 10000;  // definir intervalo de muestreo en milisegundos.
 unsigned long previousMillis = 0;
 
 // ---------- Función para verificar/reconectar WiFi ----------
