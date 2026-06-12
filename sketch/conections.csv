@@ -1,0 +1,10 @@
+ESP8266 - Display
+3V - VCC
+G - GND
+D1 - SCL
+D2 - SDA
+
+ESP8266 - DS18D20
+3V - VCC
+G - GND
+D4 - DAT
